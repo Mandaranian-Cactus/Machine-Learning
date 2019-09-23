@@ -1,0 +1,49 @@
+Sigmoid function:
+https://www.google.com/search?q=sigmoid+function&safe=strict&rlz=1C1CHBF_enCA769CA769&sxsrf=ACYBGNT20udGO-g-7WLyr7_8uKXXYYWb7Q:1569250138917&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjz2t-omOfkAhUPuZ4KHS8eCqcQ_AUIEigB&biw=2048&bih=1041#imgrc=WZzVJ8JFFoFZfM:
+Relu function:
+https://www.google.com/search?q=relu+function&safe=active&rlz=1C1CHBF_enCA769CA769&sxsrf=ACYBGNSz59Q-VEnnAEdnwVB6lBaCQziuMA:1569250525598&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiE9ZDhmefkAhWSrZ4KHbsfCW0Q_AUIEigB&biw=2048&bih=1041#imgrc=0UdUiZ4X2VLDiM:
+Threshold function:
+https://www.google.com/search?q=threshold+function&safe=strict&rlz=1C1CHBF_enCA769CA769&sxsrf=ACYBGNQY9MEYSSapgcvykMAWblFPd04shQ:1569252291819&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiMsqqroOfkAhUBvJ4KHd02DEIQ_AUIEigB&biw=2048&bih=1041#imgrc=adACnxgi-FSKOM:
+
+Neuron:
+-Simply an object that holds a number
+
+Activiation function:
+-The activiation of a neuron defines the output of that neuron with given inputs
+-The output of a neuron will have a range (-1 to 1, 0 - 1, 0, 1)
+-There are specific "functions" (As taught in gr11 math) that simplify this apply altered results:
+    * Sigmoid function
+      - Non-linear function
+      - Returns a y-value super close to 1 when given a high magnitude positive x
+      - Returns a y-value super close to 0 when given a high magnitude negative x
+      - Returns a number that's between 0 and 1 when given a low magnitude x in either positive or negative
+    * Relu function:
+      - Kinda like a linear function (Not fully sure)
+      - Returns y-value = 0 when x is negative or x = 0
+      - Returns y-value = x when x is positive.
+    * Threshold function:
+      - 1/0 format
+      - Returns y-value = 1 if x is positive or x = 0
+      - Returns y-value = 0 if x is negative
+      
+- The activation function is only present at the end, firstly the input must be refined
+- This can be done using a few ways:
+  *Weighting factor
+    - For every input x, we will need to apply a weighting to it. 
+    - The reason for this is to check to make sure neccesary inputs have higher priority
+    - The weighting is initially random however there will be other factors influecing a concret weight for every node
+      Exp:
+        If a neuron was hypothetically trying to tell which input was the yellow,
+        non-yellow inputs should be given a lower weight since it's likely they won't be
+        the ideal output
+        
+  *Bias
+    - A compnent that subtracts or adds value onto an input
+    - Used after a weighting is done to an input
+    - The usage of bias to to establish a "bias" for some actions
+    - For instance, a bias for taking "jump inputs" may be wanted by the creator in comparison to "right inputs"
+    - Unclear about wheather the bias is created by the coder and left peremenently or the neural net changes and creates it
+    
+  *Momentum
+    - A factor that contribues to how much importance should retain and be used for future demos
+    - Also unclear about this and its location in an activiation function
